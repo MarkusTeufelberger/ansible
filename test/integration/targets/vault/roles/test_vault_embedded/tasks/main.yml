@@ -9,5 +9,29 @@
     that:
       - vault_encrypted_var == "Setec Astronomy\n"
 
+- name: Assert 20 AES256 secrets (note the time spent on decryption)
+  assert:
+    that:
+      - "{{ secret_1 }} == 1"
+      - "{{ secret_2 }} == 2"
+      - "{{ secret_3 }} == 3"
+      - "{{ secret_4 }} == 4"
+      - "{{ secret_5 }} == 5"
+      - "{{ secret_6 }} == 6"
+      - "{{ secret_7 }} == 7"
+      - "{{ secret_8 }} == 8"
+      - "{{ secret_9 }} == 9"
+      - "{{ secret_10 }} == 10"
+      - "{{ secret_11 }} == 11"
+      - "{{ secret_12 }} == 12"
+      - "{{ secret_13 }} == 13"
+      - "{{ secret_14 }} == 14"
+      - "{{ secret_15 }} == 15"
+      - "{{ secret_16 }} == 16"
+      - "{{ secret_17 }} == 17"
+      - "{{ secret_18 }} == 18"
+      - "{{ secret_19 }} == 19"
+      - "{{ secret_20 }} == 20"
+
 # TODO: add a expected fail here
 # - debug: var=vault_encrypted_one_line_var_with_embedded_template
